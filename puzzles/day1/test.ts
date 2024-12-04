@@ -1,5 +1,15 @@
-import input from './input'
-import { solution1, solution2} from './answer'
+import { fetchInput } from '../shared/fetchInput'
+import { solution1, solution2 } from './answer'
 
-console.log('solution1', solution1(input))
-console.log('solution2', solution2(input))
+async function s1() {
+  const input = await fetchInput(1)
+  console.log('solution1', solution1(input))
+}
+
+async function s2() {
+  const input = await fetchInput(1)
+  console.log('solution2', solution2(input))
+}
+
+s1()
+s2()
